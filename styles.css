@@ -1,45 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-} 
-h1, h2, h3, h4, h5, h6 span{
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 span {
   color: #242424;
   text-align: center;
   line-height: 1.25;
 }
+li {
+  list-style: none;
+}
 
-p{
+p {
   line-height: 1.5;
   font-size: 16px;
 }
-    li{
-        list-style: none;
-    }
-    nav{
-      height: 100px;  
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav_links--list{
-        display: flex;
-  }
-  .nav_links--anchor{
-    text-decoration: none;
-    color: #242424;
-    margin: 0 12px;
-    font-weight: 700;
-  }
+li {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+}
+/* NAVIGATION STYLES */
+.nav {
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_link-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .nav_links--anchor---primary{
-    color: #fff;
-    background-color: #242424;
-    padding: 8px 16px;
-    border-radius: 4px;
-  }
+.nav_links-list {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link-list li {
+  display: flex;
+}
+
+.nav__link--anchor {
+  text-decoration: none;
+  color: #242424;
+  margin: 0 12px;
+  font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+  color: #fff;
+  background-color: #6030b1;
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+.nav_links-anchor {
+  text-decoration: none;
+  color: #242424;
+  margin: 0 12px;
+  font-weight: 700;
+}
+
+.nav_links-anchor--primary {
+  color: #fff;
+  background-color: #6030b1;
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.nav_links-anchor--primary:hover {
+  background-color: #5d3eff;
+}
+.nav__link--anchor-primary:hover {
+  background-color: #5d3eff;
+}
+.personal_logo {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
