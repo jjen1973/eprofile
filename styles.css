@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
+body {
+  background-color: #e6f2ff;
+}
+
 h1,
 h2,
 h3,
@@ -55,6 +60,10 @@ li {
   margin: 0;
 }
 
+.nav_links-list li {
+  padding-top: 8px;
+}
+
 .nav__link-list li {
   display: flex;
 }
@@ -94,7 +103,60 @@ li {
 }
 .personal_logo {
   width: 100%;
-  text-align: center;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  margin: 0 12px;
+  font:
+    bold 24px "Lato",
+    sans-serif;
+}
+
+.about-me-selfy {
+  width: 156px;
+  height: 156px;
+  object-fit: cover;
+  display: block;
+  margin: 24px auto 16px;
+  object-position: center 30%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-info-description {
+  max-width: 560px;
+  margin: 16px auto;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+}
+
+.about-me-info-title {
+  color: #6030b1;
+}
+
+.about-me-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.about-me-link-anchor {
+  color: #6030b1;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.about-me-link-anchor:hover {
+  color: #6030b1;
+}
+
+.about-me-undraw {
+  display: block;
+  width: 320px;
+  max-width: 90%;
+  margin: 48px auto 0;
 }
