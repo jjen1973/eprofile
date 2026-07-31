@@ -160,3 +160,52 @@ li {
   max-width: 90%;
   margin: 48px auto 0;
 }
+
+.technology-section {
+  padding: 48px 16px 56px;
+}
+
+.technology-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.technology-title {
+  color: #6030b1;
+  margin-bottom: 20px;
+}
+
+.technology-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.technology-item {
+  min-width: 90px;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background-color: #e6f2ff;
+  color: #6030b1;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.technology-item i {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.technology-item span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.technology-cpp {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
