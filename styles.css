@@ -178,6 +178,7 @@ li {
 .technology-icons {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -208,4 +209,59 @@ li {
   font-size: 28px;
   line-height: 1;
   margin-bottom: 6px;
+}
+
+.projects-section {
+  padding: 24px 16px 64px;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-title {
+  color: #6030b1;
+  margin-bottom: 8px;
+}
+
+.projects-subtitle {
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  width: 280px;
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: #242424;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #e6f2ff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.project-title {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #6030b1;
 }
