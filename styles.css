@@ -252,12 +252,15 @@ li {
   border-radius: 12px;
   background-color: #e6f2ff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  height: 100%;
 }
 
 .project-image {
   width: 100%;
+  height: 180px;
   border-radius: 10px;
   display: block;
+  object-fit: cover;
 }
 
 .project-title {
