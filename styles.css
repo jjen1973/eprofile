@@ -138,7 +138,21 @@ li {
 .contact-box p {
   text-align: center;
 }
+.email-button {
+    display: inline-block;
+    background: #6030b1;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: 0.2s;
+}
 
+.email-button:hover {
+    background: #7b4dcc;
+    transform: translateY(-2px);
+}
 .close-contact {
   position: absolute;
   top: 8px;
