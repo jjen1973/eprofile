@@ -164,7 +164,9 @@ li {
   line-height: 1;
   cursor: pointer;
 }
-
+.selfie-section {
+    position: relative;
+}
 .about-me-selfy {
   width: 156px;
   height: 156px;
@@ -173,7 +175,19 @@ li {
   margin: 24px auto 16px;
   object-position: center 30%;
   border-radius: 50%;
+  mask-image: radial-gradient(circle, black 55%, transparent 100%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.jl-signature {
+    position: absolute;
+    right: 150px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    mask-image: radial-gradient(circle, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle, black 40%, transparent 100%);
+
 }
 
 .about-me-info-description {
