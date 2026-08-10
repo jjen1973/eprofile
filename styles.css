@@ -130,6 +130,25 @@ li {
   color: #6030b1;
 }
 
+#about-me {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-me-confetti-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-me-info {
+  position: relative;
+  z-index: 2;
+}
+
 .wave-hand {
   display: inline-block;
   margin-left: 6px;

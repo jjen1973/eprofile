@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/bedad5f190.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   </head>
   <body>
     <section id="about-me">
@@ -204,5 +205,73 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      const aboutMeSection = document.getElementById("about-me");
+      const aboutMeConfettiCanvas = document.createElement("canvas");
+      aboutMeConfettiCanvas.className = "about-me-confetti-canvas";
+      aboutMeSection.appendChild(aboutMeConfettiCanvas);
+
+      let confettiTimer = null;
+      let aboutMeConfetti = null;
+
+      const launchConfetti = () => {
+        if (typeof confetti !== "function" || !aboutMeConfetti) {
+          return;
+        }
+
+        aboutMeConfetti({
+          particleCount: 18,
+          spread: 60,
+          startVelocity: 16,
+          gravity: 0.45,
+          ticks: 120,
+          scalar: 0.9,
+          origin: {
+            x: Math.random(),
+            y: Math.random() * 0.25,
+          },
+        });
+      };
+
+      const startFloatingConfetti = () => {
+        if (confettiTimer) {
+          return;
+        }
+
+        confettiTimer = setInterval(launchConfetti, 700);
+      };
+
+      const stopFloatingConfetti = () => {
+        if (!confettiTimer) {
+          return;
+        }
+
+        clearInterval(confettiTimer);
+        confettiTimer = null;
+      };
+
+      if (typeof confetti === "function") {
+        aboutMeConfetti = confetti.create(aboutMeConfettiCanvas, {
+          resize: true,
+          useWorker: true,
+        });
+
+        const aboutMeObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                startFloatingConfetti();
+              } else {
+                stopFloatingConfetti();
+              }
+            });
+          },
+          { threshold: 0.35 },
+        );
+
+        aboutMeObserver.observe(aboutMeSection);
+      }
+    </script>
   </body>
 </html>
