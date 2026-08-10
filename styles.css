@@ -106,6 +106,51 @@ li {
   background-color: #5d3eff;
 }
 
+.contact-window {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 25, 35, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 20;
+}
+
+.contact-window.is-open {
+  display: flex;
+}
+
+.contact-box {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.contact-box h2 {
+  color: #6030b1;
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  text-align: center;
+}
+
+.close-contact {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #6030b1;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .about-me-selfy {
   width: 156px;
   height: 156px;

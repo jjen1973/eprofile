@@ -10,7 +10,9 @@
       src="https://kit.fontawesome.com/bedad5f190.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
+      </script scr="app.js" defer></script>
+  
   </head>
   <body>
     <section id="about-me">
@@ -31,13 +33,35 @@
         </li>
         <li>
           <a
-            href="mailto:jenparker98@yahoo.com"
+            href="#"
+            id="open-contact"
             class="nav_links-anchor nav_links-anchor--primary link_hover-effect"
             >Contact</a
           >
         </li>
       </ul>
-
+      <div id="contact-window" class="contact-window" aria-hidden="true">
+        <div
+          class="contact-box"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="contact-title"
+        >
+          <button
+            id="close-contact"
+            class="close-contact"
+            aria-label="Close contact window"
+          >
+            &times;
+          </button>
+          <h2 id="contact-title">Contact Me</h2>
+          <p>I'd love to hear from you!</p>
+          <p>
+            Email:
+            <a href="mailto:jenparker98@yahoo.com">jenparker98@yahoo.com</a>
+          </p>
+        </div>
+      </div>
       <div class="about-me-info row">
         <div class="about-me-info-container"></div>
         <figure>
@@ -208,6 +232,9 @@
 
     <script>
       const aboutMeSection = document.getElementById("about-me");
+      const openContactButton = document.getElementById("open-contact");
+      const closeContactButton = document.getElementById("close-contact");
+      const contactWindow = document.getElementById("contact-window");
       const aboutMeConfettiCanvas = document.createElement("canvas");
       aboutMeConfettiCanvas.className = "about-me-confetti-canvas";
       aboutMeSection.appendChild(aboutMeConfettiCanvas);
@@ -272,6 +299,38 @@
 
         aboutMeObserver.observe(aboutMeSection);
       }
+
+      const openContactWindow = () => {
+        contactWindow.classList.add("is-open");
+        contactWindow.setAttribute("aria-hidden", "false");
+      };
+
+      const closeContactWindow = () => {
+        contactWindow.classList.remove("is-open");
+        contactWindow.setAttribute("aria-hidden", "true");
+      };
+
+      openContactButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        openContactWindow();
+      });
+
+      closeContactButton.addEventListener("click", closeContactWindow);
+
+      contactWindow.addEventListener("click", (event) => {
+        if (event.target === contactWindow) {
+          closeContactWindow();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          contactWindow.classList.contains("is-open")
+        ) {
+          closeContactWindow();
+        }
+      });
     </script>
   </body>
 </html>
