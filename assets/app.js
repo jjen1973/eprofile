@@ -1,12 +1,108 @@
-const openContact = document.getElementById("open-contact");
-const contactWindow = document.getElementById("contact-window");
-const closeContact = document.getElementById("close-contact");
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutMeSection = document.getElementById("about-me");
+  const openContact = document.getElementById("open-contact");
+  const contactWindow = document.getElementById("contact-window");
+  const closeContact = document.getElementById("close-contact");
+  const form = document.getElementById("contact-form");
 
-openContact.addEventListener("click", function (event) {
-  event.preventDefault();
-  contactWindow.setAttribute("aria-hidden", "false");
-});
+  if (aboutMeSection && typeof confetti === "function") {
+    const aboutMeConfettiCanvas = document.createElement("canvas");
+    aboutMeConfettiCanvas.className = "about-me-confetti-canvas";
+    aboutMeSection.appendChild(aboutMeConfettiCanvas);
 
-closeContact.addEventListener("click", function () {
-  contactWindow.setAttribute("aria-hidden", "true");
+    const aboutMeConfetti = confetti.create(aboutMeConfettiCanvas, {
+      resize: true,
+      useWorker: true,
+    });
+
+    let confettiTimer = null;
+
+    const launchConfetti = () => {
+      aboutMeConfetti({
+        particleCount: 18,
+        spread: 60,
+        startVelocity: 16,
+        gravity: 0.45,
+        ticks: 120,
+        scalar: 0.9,
+        origin: {
+          x: Math.random(),
+          y: Math.random() * 0.25,
+        },
+      });
+    };
+
+    const startFloatingConfetti = () => {
+      if (confettiTimer) {
+        return;
+      }
+
+      confettiTimer = setInterval(launchConfetti, 700);
+    };
+
+    const stopFloatingConfetti = () => {
+      if (!confettiTimer) {
+        return;
+      }
+
+      clearInterval(confettiTimer);
+      confettiTimer = null;
+    };
+
+    const aboutMeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startFloatingConfetti();
+          } else {
+            stopFloatingConfetti();
+          }
+        });
+      },
+      { threshold: 0.35 },
+    );
+
+    aboutMeObserver.observe(aboutMeSection);
+  }
+
+  if (openContact && contactWindow && closeContact) {
+    const openContactWindow = () => {
+      contactWindow.classList.add("is-open");
+      contactWindow.setAttribute("aria-hidden", "false");
+    };
+
+    const closeContactWindow = () => {
+      contactWindow.classList.remove("is-open");
+      contactWindow.setAttribute("aria-hidden", "true");
+    };
+
+    openContact.addEventListener("click", (event) => {
+      event.preventDefault();
+      openContactWindow();
+    });
+
+    closeContact.addEventListener("click", closeContactWindow);
+
+    contactWindow.addEventListener("click", (event) => {
+      if (event.target === contactWindow) {
+        closeContactWindow();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        contactWindow.classList.contains("is-open")
+      ) {
+        closeContactWindow();
+      }
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      console.log("FORM SUBMITTED!");
+    });
+  }
 });
