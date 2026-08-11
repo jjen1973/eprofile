@@ -102,7 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      console.log("FORM SUBMITTED!");
+
+      const name = document.getElementById("name")?.value.trim() || "";
+      const email = document.getElementById("email")?.value.trim() || "";
+      const message = document.getElementById("message")?.value.trim() || "";
+
+      console.log("FORM SUBMITTED:", { name, email, message });
     });
   }
 });
