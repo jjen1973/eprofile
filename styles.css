@@ -139,19 +139,19 @@ li {
   text-align: center;
 }
 .email-button {
-    display: inline-block;
-    background: #6030b1;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 18px;
-    transition: 0.2s;
+  display: inline-block;
+  background: #6030b1;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.2s;
 }
 
 .email-button:hover {
-    background: #7b4dcc;
-    transform: translateY(-2px);
+  background: #7b4dcc;
+  transform: translateY(-2px);
 }
 .close-contact {
   position: absolute;
@@ -165,29 +165,36 @@ li {
   cursor: pointer;
 }
 .selfie-section {
-    position: relative;
+  display: flex;
+  justify-content: center;
 }
+
+.about-me-selfy-figure {
+  position: relative;
+  display: inline-block;
+  margin: 24px auto 16px;
+}
+
 .about-me-selfy {
   width: 156px;
   height: 156px;
   object-fit: cover;
   display: block;
-  margin: 24px auto 16px;
   object-position: center 30%;
   border-radius: 50%;
   mask-image: radial-gradient(circle, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 55%, transparent 100%);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.jl-signature {
-    position: absolute;
-    right: 150px;
-    bottom: 5px;
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    mask-image: radial-gradient(circle, black 40%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle, black 40%, transparent 100%);
 
+.jl-signature {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(0.95) contrast(1.15);
 }
 
 .about-me-info-description {
