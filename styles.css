@@ -14,6 +14,98 @@ body {
   background-color: #e6f2ff;
 }
 
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+  z-index: 40;
+}
+
+.theme-toggle:hover {
+  background: #2a2a2a;
+}
+
+.theme-dark {
+  background-color: #101827;
+  color: #e6ecf5;
+}
+
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6,
+.theme-dark p,
+.theme-dark label,
+.theme-dark .nav_links-anchor,
+.theme-dark .project-link {
+  color: #e6ecf5;
+}
+
+.theme-dark .about-me-info-title,
+.theme-dark .technology-title,
+.theme-dark .projects-title,
+.theme-dark .project-title,
+.theme-dark .about-me-link-anchor,
+.theme-dark .site-footer-link,
+.theme-dark .site-footer-text {
+  color: #9fc4ff;
+}
+
+.theme-dark .technology-item,
+.theme-dark .project-link,
+.theme-dark .site-footer,
+.theme-dark .site-footer-logo,
+.theme-dark .contact-box {
+  background-color: #1c2537;
+}
+
+.theme-dark .site-footer {
+  border-top-color: rgba(159, 196, 255, 0.28);
+}
+
+.theme-dark .contact-submit-button,
+.theme-dark .nav_links-anchor--primary {
+  background-color: #2f6ac7;
+}
+
+.theme-dark .contact-submit-button:hover,
+.theme-dark .nav_links-anchor--primary:hover {
+  background-color: #275cac;
+}
+
+.theme-dark .theme-toggle {
+  background: #111111;
+}
+
+.theme-dark .theme-toggle:hover {
+  background: #2a2a2a;
+}
+
+.theme-dark #contact-form input,
+.theme-dark #contact-form textarea {
+  background-color: #101827;
+  color: #e6ecf5;
+  border: 1px solid #324766;
+}
+
+.theme-dark .contact-window {
+  background: rgba(5, 10, 18, 0.7);
+}
+
 h1,
 h2,
 h3,

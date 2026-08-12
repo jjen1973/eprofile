@@ -1,9 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
   const aboutMeSection = document.getElementById("about-me");
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeIcon = themeToggle?.querySelector("i");
   const openContact = document.getElementById("open-contact");
   const contactWindow = document.getElementById("contact-window");
   const closeContact = document.getElementById("close-contact");
   const form = document.getElementById("contact-form");
+
+  const applyTheme = (theme) => {
+    const isDark = theme === "dark";
+    document.body.classList.toggle("theme-dark", isDark);
+
+    if (themeIcon) {
+      themeIcon.classList.toggle("fa-moon", !isDark);
+      themeIcon.classList.toggle("fa-sun", isDark);
+    }
+
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light theme" : "Switch to dark theme",
+      );
+    }
+  };
+
+  const savedTheme = localStorage.getItem("theme");
+  applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.body.classList.contains("theme-dark");
+      const nextTheme = isDark ? "light" : "dark";
+
+      applyTheme(nextTheme);
+      localStorage.setItem("theme", nextTheme);
+    });
+  }
 
   if (aboutMeSection && typeof confetti === "function") {
     const aboutMeConfettiCanvas = document.createElement("canvas");
