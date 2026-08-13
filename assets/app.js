@@ -1,3 +1,7 @@
+emailjs.init({
+  publicKey: "NipmTQ5Q0maM3Qb18",
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const aboutMeSection = document.getElementById("about-me");
   const themeToggle = document.getElementById("theme-toggle");
