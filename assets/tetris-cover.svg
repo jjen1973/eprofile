@@ -1,0 +1,74 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Jennifer's Tetris cover</title>
+  <desc id="desc">A polished, personal Tetris cover in the portfolio's purple and blue color palette.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="50%" stop-color="#1a1742"/>
+      <stop offset="100%" stop-color="#2a1c52"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0%" stop-color="#101a2d" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#17263d" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" x2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="500" fill="none" stroke="rgba(255,255,255,0.12)"/>
+
+  <g opacity="0.8">
+    <circle cx="90" cy="70" r="3" fill="#e2e8f0"/>
+    <circle cx="180" cy="120" r="2" fill="#e2e8f0"/>
+    <circle cx="660" cy="78" r="2.5" fill="#e2e8f0"/>
+    <circle cx="720" cy="165" r="2" fill="#e2e8f0"/>
+    <circle cx="622" cy="255" r="2.5" fill="#e2e8f0"/>
+    <circle cx="200" cy="320" r="2" fill="#e2e8f0"/>
+  </g>
+
+  <g opacity="0.12">
+    <rect x="110" y="90" width="340" height="290" rx="28" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(130 120)">
+    <rect x="0" y="0" width="46" height="46" rx="8" fill="#67e8f9"/>
+    <rect x="46" y="0" width="46" height="46" rx="8" fill="#67e8f9"/>
+    <rect x="92" y="0" width="46" height="46" rx="8" fill="#67e8f9"/>
+    <rect x="138" y="0" width="46" height="46" rx="8" fill="#fbbf24"/>
+
+    <rect x="0" y="46" width="46" height="46" rx="8" fill="#67e8f9"/>
+    <rect x="46" y="46" width="46" height="46" rx="8" fill="#f472b6"/>
+    <rect x="92" y="46" width="46" height="46" rx="8" fill="#f472b6"/>
+    <rect x="138" y="46" width="46" height="46" rx="8" fill="#fbbf24"/>
+
+    <rect x="0" y="92" width="46" height="46" rx="8" fill="#34d399"/>
+    <rect x="46" y="92" width="46" height="46" rx="8" fill="#34d399"/>
+    <rect x="92" y="92" width="46" height="46" rx="8" fill="#a78bfa"/>
+    <rect x="138" y="92" width="46" height="46" rx="8" fill="#fbbf24"/>
+
+    <rect x="0" y="138" width="46" height="46" rx="8" fill="#f87171"/>
+    <rect x="46" y="138" width="46" height="46" rx="8" fill="#f87171"/>
+    <rect x="92" y="138" width="46" height="46" rx="8" fill="#a78bfa"/>
+    <rect x="138" y="138" width="46" height="46" rx="8" fill="#fbbf24"/>
+  </g>
+
+  <g transform="translate(515 130)">
+    <circle cx="38" cy="38" r="38" fill="url(#glow)" opacity="0.18"/>
+    <text x="18" y="54" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#f8fafc">JL</text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#9bdcf7" letter-spacing="5">ARCADE</text>
+  </g>
+
+  <g transform="translate(480 215)" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="800">
+    <text x="0" y="0" font-size="72">TETRIS</text>
+    <text x="5" y="58" font-size="22" fill="#a5f3fc" letter-spacing="6">CLASSIC</text>
+  </g>
+
+  <g transform="translate(485 320)" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18">
+    <rect x="0" y="0" width="115" height="12" rx="6" fill="#67e8f9"/>
+    <rect x="0" y="28" width="90" height="12" rx="6" fill="#c084fc"/>
+    <rect x="0" y="56" width="104" height="12" rx="6" fill="#34d399"/>
+  </g>
+</svg>

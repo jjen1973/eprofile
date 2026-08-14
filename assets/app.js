@@ -143,7 +143,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email")?.value.trim() || "";
       const message = document.getElementById("message")?.value.trim() || "";
 
-      console.log("FORM SUBMITTED:", { name, email, message });
-    });
-  }
+      emailjs.send("service_qa8tdoc", "template_auu796j", {
+  name: name,
+  email: email,
+  message: message,
+})
+.then(() => {
+  alert("Message sent successfully!");
+  form.reset();
+})
+.catch((error) => {
+  console.error("EmailJS error:", error);
+  alert("Message failed to send.");
+});
+  });
+}
 });
