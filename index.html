@@ -232,8 +232,12 @@
               aria-label="Car project"
             >
               <img
-                src="assets/car-cover.svg"
-                alt="Car-themed project cover"
+                src="assets/Buc logo.png"
+                onerror="
+                  this.onerror = null;
+                  this.src = 'assets/car-cover.svg';
+                "
+                alt="Car project cover"
                 class="project-image"
               />
               <h3 class="project-title">Car Project</h3>
