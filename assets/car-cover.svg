@@ -1,0 +1,35 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="70" x2="1120" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0FAFF"/>
+      <stop offset="1" stop-color="#D9EDFF"/>
+    </linearGradient>
+    <linearGradient id="car" x1="360" y1="390" x2="860" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6A41C5"/>
+      <stop offset="1" stop-color="#3C1E7D"/>
+    </linearGradient>
+    <linearGradient id="window" x1="470" y1="345" x2="730" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#BFDFFF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="1010" cy="170" r="86" fill="#FFE8AE"/>
+  <path d="M0 650C160 600 300 620 430 670C560 720 730 730 1200 620V800H0V650Z" fill="#C3E2F9"/>
+
+  <rect x="300" y="430" width="560" height="145" rx="42" fill="url(#car)"/>
+  <path d="M395 430L505 345H690L785 430H395Z" fill="#4A289B"/>
+  <path d="M435 430L530 364H675L748 430H435Z" fill="url(#window)"/>
+  <rect x="552" y="455" width="16" height="78" rx="8" fill="#D0B8FF"/>
+
+  <circle cx="430" cy="585" r="66" fill="#1F1F1F"/>
+  <circle cx="430" cy="585" r="30" fill="#B3C7DB"/>
+  <circle cx="760" cy="585" r="66" fill="#1F1F1F"/>
+  <circle cx="760" cy="585" r="30" fill="#B3C7DB"/>
+
+  <circle cx="812" cy="484" r="14" fill="#FF9E5D"/>
+  <rect x="334" y="480" width="26" height="18" rx="8" fill="#EAF2FF"/>
+
+  <text x="600" y="700" text-anchor="middle" fill="#3D2B6D" font-size="64" font-family="Lato, sans-serif" font-weight="700">Car Project</text>
+</svg>

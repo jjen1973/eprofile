@@ -58,6 +58,7 @@ body {
 .theme-dark .about-me-info-title,
 .theme-dark .technology-title,
 .theme-dark .projects-title,
+.theme-dark .games-title,
 .theme-dark .project-title,
 .theme-dark .about-me-link-anchor,
 .theme-dark .site-footer-link,
@@ -442,7 +443,8 @@ li {
   padding: 24px 16px 64px;
 }
 
-.projects-container {
+.projects-container,
+.games-container {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -455,6 +457,29 @@ li {
 
 .projects-subtitle {
   margin-bottom: 20px;
+}
+
+.games-section {
+  padding: 12px 16px 64px;
+}
+
+.games-title {
+  color: #6030b1;
+  margin-bottom: 8px;
+}
+
+.games-subtitle {
+  margin-bottom: 20px;
+}
+
+.projects-subgroup {
+  margin-top: 36px;
+}
+
+.projects-subgroup-title {
+  color: #6030b1;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
 }
 
 .project-list {
@@ -476,25 +501,28 @@ li {
   display: block;
   text-decoration: none;
   color: #242424;
-  padding: 14px;
-  border-radius: 12px;
-  background-color: #e6f2ff;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  padding: 0;
+  border-radius: 16px;
+  background: transparent;
+  box-shadow: none;
   height: 100%;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .project-link:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  box-shadow: none;
+}
+
+.project-link--cover .project-image {
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(96, 48, 177, 0.12);
+  border: 1px solid rgba(96, 48, 177, 0.08);
 }
 
 .project-image {
   width: 100%;
-  height: 180px;
-  border-radius: 10px;
+  height: 210px;
   display: block;
   object-fit: cover;
 }
