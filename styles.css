@@ -623,3 +623,10 @@ li {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 420px) {
+  .theme-toggle {
+    left: auto;
+    right: 10px;
+  }
+}
