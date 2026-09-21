@@ -65,3 +65,4 @@
 .projects{background:#dde8df;box-shadow:0 0 0 100vmax #dde8df;clip-path:inset(0 -100vmax)}
 .theme-dark .projects{background:#26352b;box-shadow:0 0 0 100vmax #26352b}
 .project img{border-radius:14px}
+.hero{position:relative}.hero-confetti{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}.hero>div{position:relative;z-index:3}

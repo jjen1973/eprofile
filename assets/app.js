@@ -17,4 +17,15 @@ document.addEventListener("DOMContentLoaded",()=>{
   window.addEventListener("resize",setProjectRows);
   if("IntersectionObserver" in window){const projectObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");projectObserver.unobserve(entry.target)}})},{threshold:.15});cards.forEach(card=>projectObserver.observe(card))}else{cards.forEach(card=>card.classList.add("is-visible"))}
  }
+
+ const hero=document.querySelector(".hero");
+ if(hero&&typeof window.confetti==="function"&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const canvas=document.createElement("canvas");canvas.className="hero-confetti";hero.appendChild(canvas);
+  const celebration=window.confetti.create(canvas,{resize:true,useWorker:true});let confettiTimer=null;
+  const burst=()=>celebration({particleCount:14,spread:62,startVelocity:14,gravity:.42,ticks:125,scalar:.82,colors:["#345843","#ed9f7d","#f2ce67","#b9ccbc"],origin:{x:Math.random(),y:Math.random()*.22}});
+  const start=()=>{if(!confettiTimer){burst();confettiTimer=setInterval(burst,900)}};
+  const stop=()=>{if(confettiTimer){clearInterval(confettiTimer);confettiTimer=null}};
+  new IntersectionObserver(entries=>entries[0].isIntersecting?start():stop(),{threshold:.25}).observe(hero);
+  document.addEventListener("visibilitychange",()=>document.hidden?stop():hero.getBoundingClientRect().bottom>0&&start());
+ }
 });
